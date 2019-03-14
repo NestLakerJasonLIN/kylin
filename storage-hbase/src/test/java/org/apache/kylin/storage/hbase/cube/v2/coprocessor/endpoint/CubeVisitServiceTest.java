@@ -148,9 +148,9 @@ public class CubeVisitServiceTest extends LocalFileMetadataTestCase {
         conf.setStrings(CoprocessorHost.REGION_COPROCESSOR_CONF_KEY,
                 TestRowProcessorEndpoint.RowProcessorEndpoint.class.getName());
         conf.setInt(HConstants.HBASE_CLIENT_RETRIES_NUMBER, 2);
-        conf.setInt(HConstants.MASTER_PORT, 17000);
-        conf.setInt(HConstants.MASTER_INFO_PORT, 17010);
-        conf.setInt(HConstants.REGIONSERVER_PORT, 17020);
+        conf.setInt(HConstants.MASTER_PORT, 58000);
+        conf.setInt(HConstants.MASTER_INFO_PORT, 58010);
+        conf.setInt(HConstants.REGIONSERVER_PORT, 58020);
         conf.setLong("hbase.hregion.row.processor.timeout", 1000L);
         util.startMiniCluster();
         staticCreateTestMetadata();
