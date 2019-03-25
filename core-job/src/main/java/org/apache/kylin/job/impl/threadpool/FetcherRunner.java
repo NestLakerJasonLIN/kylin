@@ -72,7 +72,7 @@ public abstract class FetcherRunner implements Runnable {
         this.fetchFailed = fetchFailed;
     }
 
-    ExecutableManager getExecutableManger() {
+    ExecutableManager getExecutableManager() {
         return ExecutableManager.getInstance(jobEngineConfig.getConfig());
     }
 }

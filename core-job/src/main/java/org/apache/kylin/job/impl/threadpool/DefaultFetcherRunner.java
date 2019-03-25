@@ -48,7 +48,7 @@ public class DefaultFetcherRunner extends FetcherRunner {
             }
 
             int nRunning = 0, nReady = 0, nStopped = 0, nOthers = 0, nError = 0, nDiscarded = 0, nSUCCEED = 0;
-            for (final String id : getExecutableManger().getAllJobIdsInCache()) {
+            for (final String id : getExecutableManager().getAllJobIdsInCache()) {
                 if (isJobPoolFull()) {
                     return;
                 }
@@ -58,7 +58,7 @@ public class DefaultFetcherRunner extends FetcherRunner {
                     continue;
                 }
 
-                final Output outputDigest = getExecutableManger().getOutputDigest(id);
+                final Output outputDigest = getExecutableManager().getOutputDigest(id);
                 if ((outputDigest.getState() != ExecutableState.READY)) {
                     // logger.debug("Job id:" + id + " not runnable");
                     if (outputDigest.getState() == ExecutableState.SUCCEED) {
@@ -71,7 +71,7 @@ public class DefaultFetcherRunner extends FetcherRunner {
                         nStopped++;
                     } else {
                         if (fetchFailed) {
-                            getExecutableManger().forceKillJob(id);
+                            getExecutableManager().forceKillJob(id);
                             nError++;
                         } else {
                             nOthers++;
@@ -80,7 +80,7 @@ public class DefaultFetcherRunner extends FetcherRunner {
                     continue;
                 }
 
-                final AbstractExecutable executable = getExecutableManger().getJob(id);
+                final AbstractExecutable executable = getExecutableManager().getJob(id);
                 if (!executable.isReady()) {
                     nOthers++;
                     continue;
