@@ -180,7 +180,7 @@
 
     <property>
         <name>hbase.rootdir</name>
-        <value>hdfs://sandbox.hortonworks.com:8020/apps/hbase/data</value>
+        <value>hdfs://sandbox-hdp.hortonworks.com:8020/apps/hbase/data</value>
     </property>
 
     <property>
@@ -230,7 +230,7 @@
 
     <property>
         <name>hbase.zookeeper.quorum</name>
-        <value>sandbox.hortonworks.com</value>
+        <value>sandbox-hdp.hortonworks.com</value>
     </property>
 
     <property>

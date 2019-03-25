@@ -212,12 +212,12 @@
 
     <property>
         <name>dfs.namenode.http-address</name>
-        <value>sandbox.hortonworks.com:50070</value>
+        <value>sandbox-hdp.hortonworks.com:50070</value>
     </property>
 
     <property>
         <name>dfs.namenode.https-address</name>
-        <value>sandbox.hortonworks.com:50470</value>
+        <value>sandbox-hdp.hortonworks.com:50470</value>
     </property>
 
     <property>
@@ -237,7 +237,7 @@
 
     <property>
         <name>dfs.namenode.rpc-address</name>
-        <value>sandbox.hortonworks.com:8020</value>
+        <value>sandbox-hdp.hortonworks.com:8020</value>
     </property>
 
     <property>
@@ -247,7 +247,7 @@
 
     <property>
         <name>dfs.namenode.secondary.http-address</name>
-        <value>sandbox.hortonworks.com:50090</value>
+        <value>sandbox-hdp.hortonworks.com:50090</value>
     </property>
 
     <property>

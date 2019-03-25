@@ -15,7 +15,6 @@
   limitations under the License.
 -->
 <configuration>
-
     <property>
         <name>io.sort.mb</name>
         <value>64</value>
@@ -38,18 +37,18 @@
 
     <property>
         <name>mapreduce.admin.map.child.java.opts</name>
-        <value>-server -XX:NewRatio=8 -Djava.net.preferIPv4Stack=true -Dhdp.version=${hdp.version}</value>
+        <value>-server -XX:NewRatio=8 -Djava.net.preferIPv4Stack=true -Dhdp.version=${hdp.version} -Djava.library.path="${java.library.path}:/usr/hdp/${hdp.version}/hadoop/lib/native"</value>
     </property>
 
     <property>
         <name>mapreduce.admin.reduce.child.java.opts</name>
-        <value>-server -XX:NewRatio=8 -Djava.net.preferIPv4Stack=true -Dhdp.version=${hdp.version}</value>
+        <value>-server -XX:NewRatio=8 -Djava.net.preferIPv4Stack=true -Dhdp.version=${hdp.version} -Djava.library.path="${java.library.path}:/usr/hdp/${hdp.version}/hadoop/lib/native"</value>
     </property>
 
     <property>
         <name>mapreduce.admin.user.env</name>
         <value>
-            LD_LIBRARY_PATH=/usr/hdp/${hdp.version}/hadoop/lib/native:/usr/hdp/${hdp.version}/hadoop/lib/native/Linux-amd64-64
+           LD_LIBRARY_PATH=/usr/hdp/${hdp.version}/hadoop/lib/native:/usr/hdp/${hdp.version}/hadoop/lib/native/Linux-amd64-64
         </value>
     </property>
 
@@ -97,7 +96,7 @@
 
     <property>
         <name>mapreduce.jobhistory.address</name>
-        <value>sandbox.hortonworks.com:10020</value>
+        <value>sandbox-hdp.hortonworks.com:10020</value>
     </property>
 
     <property>
@@ -132,7 +131,7 @@
 
     <property>
         <name>mapreduce.jobhistory.webapp.address</name>
-        <value>sandbox.hortonworks.com:19888</value>
+        <value>sandbox-hdp.hortonworks.com:19888</value>
     </property>
 
     <property>
@@ -142,7 +141,7 @@
 
     <property>
         <name>mapreduce.map.log.level</name>
-        <value>INFO</value>
+        <value>DEBUG</value>
     </property>
 
     <property>
@@ -187,7 +186,7 @@
 
     <property>
         <name>mapreduce.reduce.log.level</name>
-        <value>INFO</value>
+        <value>DEBUG</value>
     </property>
 
     <property>

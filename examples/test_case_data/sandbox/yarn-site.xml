@@ -15,7 +15,14 @@
   limitations under the License.
 -->
 <configuration>
-
+    <property>
+        <name>yarn.nodemanager.aux-services.spark_shuffle.class</name>
+        <value>org.apache.spark.network.yarn.YarnShuffleService</value>
+    </property>
+    <property>
+        <name>yarn.nodemanager.aux-services.spark_shuffle.classpath</name>
+        <value>/usr/local/spark/yarn/*</value>
+    </property>
     <property>
         <name>hadoop.registry.rm.enabled</name>
         <value>true</value>
@@ -23,7 +30,7 @@
 
     <property>
         <name>hadoop.registry.zk.quorum</name>
-        <value>sandbox.hortonworks.com:2181</value>
+        <value>sandbox-hdp.hortonworks.com:2181</value>
     </property>
 
     <property>
@@ -75,7 +82,7 @@
 
     <property>
         <name>yarn.log.server.url</name>
-        <value>http://sandbox.hortonworks.com:19888/jobhistory/logs</value>
+        <value>http://sandbox-hdp.hortonworks.com:19888/jobhistory/logs</value>
     </property>
 
     <property>
@@ -275,12 +282,12 @@
 
     <property>
         <name>yarn.resourcemanager.address</name>
-        <value>sandbox.hortonworks.com:8050</value>
+        <value>sandbox-hdp.hortonworks.com:8032</value>
     </property>
 
     <property>
         <name>yarn.resourcemanager.admin.address</name>
-        <value>sandbox.hortonworks.com:8141</value>
+        <value>sandbox-hdp.hortonworks.com:8141</value>
     </property>
 
     <property>
@@ -320,7 +327,7 @@
 
     <property>
         <name>yarn.resourcemanager.hostname</name>
-        <value>sandbox.hortonworks.com</value>
+        <value>sandbox-hdp.hortonworks.com</value>
     </property>
 
     <property>
@@ -335,12 +342,12 @@
 
     <property>
         <name>yarn.resourcemanager.resource-tracker.address</name>
-        <value>sandbox.hortonworks.com:8025</value>
+        <value>sandbox-hdp.hortonworks.com:8025</value>
     </property>
 
     <property>
         <name>yarn.resourcemanager.scheduler.address</name>
-        <value>sandbox.hortonworks.com:8030</value>
+        <value>sandbox-hdp.hortonworks.com:8030</value>
     </property>
 
     <property>
@@ -375,7 +382,7 @@
 
     <property>
         <name>yarn.resourcemanager.webapp.address</name>
-        <value>sandbox.hortonworks.com:8088</value>
+        <value>sandbox-hdp.hortonworks.com:8088</value>
     </property>
 
     <property>
@@ -385,7 +392,7 @@
 
     <property>
         <name>yarn.resourcemanager.webapp.https.address</name>
-        <value>sandbox.hortonworks.com:8090</value>
+        <value>sandbox-hdp.hortonworks.com:8090</value>
     </property>
 
     <property>
@@ -425,7 +432,7 @@
 
     <property>
         <name>yarn.resourcemanager.zk-address</name>
-        <value>sandbox.hortonworks.com:2181</value>
+        <value>sandbox-hdp.hortonworks.com:2181</value>
     </property>
 
     <property>
@@ -470,7 +477,7 @@
 
     <property>
         <name>yarn.timeline-service.address</name>
-        <value>sandbox.hortonworks.com:10200</value>
+        <value>sandbox-hdp.hortonworks.com:10200</value>
     </property>
 
     <property>
@@ -610,12 +617,12 @@
 
     <property>
         <name>yarn.timeline-service.webapp.address</name>
-        <value>sandbox.hortonworks.com:8188</value>
+        <value>sandbox-hdp.hortonworks.com:8188</value>
     </property>
 
     <property>
         <name>yarn.timeline-service.webapp.https.address</name>
-        <value>sandbox.hortonworks.com:8190</value>
+        <value>sandbox-hdp.hortonworks.com:8190</value>
     </property>
 
 </configuration>

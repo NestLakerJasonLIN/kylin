@@ -1220,6 +1220,29 @@
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>exec-maven-plugin</artifactId>
           <version>1.6.0</version>
+            <executions>
+              <execution>
+                <goals>
+                  <goal>exec</goal>
+                 </goals>
+              </execution>
+            </executions>
+            <configuration>
+                <executable>java</executable>
+                <classpathScope>compile</classpathScope>
+                <arguments>
+                    <argument>-Dhdp.version=2.6.5.0-292</argument>
+                    <argument>-DSPARK_HOME=/usr/local/spark</argument>
+                    <argument>-Dkylin.hadoop.conf.dir=/workspace/kylin/examples/test_case_data/sandbox</argument>
+                    <argument>-Xms800m</argument> 
+                    <argument>-Xmx800m</argument> 
+                    <argument>-XX:PermSize=64M</argument> 
+                    <argument>-XX:MaxNewSize=256m</argument>
+                    <argument>-XX:MaxPermSize=128m</argument>
+                    <argument>-cp</argument><classpath/>
+                    <argument>org.apache.kylin.rest.DebugTomcat</argument>
+                </arguments>
+            </configuration>
         </plugin>
         <plugin>
           <groupId>org.springframework.boot</groupId>
